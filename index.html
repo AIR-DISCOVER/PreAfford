@@ -220,12 +220,18 @@ Robotic manipulation of ungraspable objects with two-finger grippers presents si
           </div>
         </div>
         <br /><br />
-        <div class="columns is-centered">
-          <img src="static/images/framework.png" width="67%" />
+
+        <div class="columns is-centered has-text-centered"
+          style="width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column">
+          <div style="width: 70%; display: flex; justify-content: center; align-items: stretch; flex-direction: row">
+            <div style="width: 100%;">
+              <img src="static/images/framework.png" alt="">
+            </div>
+          </div>
+          <div style="width: 70%;">
+            <b>Framework of PreAfford.</b> Pre-grasping and grasping modules are included, each containing an affordance network, proposal network, and critic network. In the inference phase, the two modules process point clouds to devise strategies for pre-grasping and grasping. Conversely, during training, the grasping module generates rewards to train the pre-grasping module, which we intuitively call <b>relay</b>.
+          </div>
         </div>
-        <h2 class="has-text-centered is-size-6" width="45%">
-          <b>Framework of PreAfford.</b> Pre-grasping and grasping modules are included, each containing an affordance network, proposal network, and critic network. In the inference phase, the two modules process point clouds to devise strategies for pre-grasping and grasping. Conversely, during training, the grasping module generates rewards to train the pre-grasping module, which we intuitively call <b>relay</b>.
-        </h2>
 
       </div>
     </div>
