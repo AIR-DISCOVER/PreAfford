@@ -6,10 +6,10 @@
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description"
-    content="SCP-Diff: Photo-Realistic Semantic Image Synthesis with Spatial-Categorical Joint Prior. Semantic image synthesis (SIS) shows good promises for sensor simulation. However, current best practices in this field, based on GANs, have not yet reached the desired level of quality. As latent diffusion models make significant strides in image generation, we are prompted to evaluate ControlNet, a notable method for its dense control capabilities. Our investigation uncovered two primary issues with its results: the presence of weird sub-structures within large semantic areas and the misalignment of content with the semantic mask. Through empirical study, we pinpointed the cause of these problems as a mismatch between the noised training data distribution and the standard normal prior applied at the inference stage. To address this challenge, we developed specific noise priors for SIS, encompassing spatial, categorical, and a novel spatial-categorical joint prior for inference. This approach, which we have named SCP-Diff, has yielded exceptional results, achieving an FID of 10.53 on Cityscapes and 12.66 on ADE20K." />
+    content="PreAfford: Universal Affordance-Based Pre-Grasping for Diverse Objects and Environments. Robotic manipulation of ungraspable objects with two-finger grippers presents significant challenges due to the paucity of graspable features, while traditional pre-grasping techniques, which rely on repositioning objects and leveraging external aids like table edges, lack the adaptability across object categories and scenes. Addressing this, we introduce PreAfford, a novel pre-grasping planning framework that utilizes a point-level affordance representation and a relay training approach to enhance adaptability across a broad range of environments and object types, including those previously unseen. Demonstrated on the ShapeNet-v2 dataset, PreAfford significantly improves grasping success rates by 69% and validates its practicality through real-world experiments. This work offers a robust and adaptable solution for manipulating ungraspable objects." />
 
   <meta name="keywords"
-    content="SCP-Diff, SCP Diff, Semantic Image Synthesis, Diffusion Models, Latent Diffusion Models, Noise Prior, Inference Gap" />
+    content="PreAfford: Universal Affordance-Based Pre-Grasping for Diverse Objects and Environments" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>
@@ -41,44 +41,79 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h2 class="title is-2 publication-title">
-              SCP-Diff: Photo-Realistic Semantic Image Synthesis with
-              Spatial-Categorical Joint Prior
+              PreAfford: Universal Affordance-Based Pre-Grasping for Diverse Objects and Environments
             </h2>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
+
               <span class="author-block">
-                <a href="https://c7w.tech/about/" target="_blank">Huan-ang Gao</a><sup>*1</sup>,</span>
+                Kairui Ding
+                <sup>1</sup>
+              ,</span>
+
               <span class="author-block">
-                <!-- <a href="SECOND AUTHOR PERSONAL LINK" target="_blank" -->
-                Mingju Gao<sup>*1</sup>,</span>
+                Boyuan Chen
+                <sup>1</sup>
+              ,</span>
+
               <span class="author-block">
-                <!-- <a href="SECOND AUTHOR PERSONAL LINK" target="_blank" -->
-                Jiaju Li<sup>1,2</sup>,</span>
+                <a href="https://warshallrho.github.io/" target="_blank">Ruihai Wu</a>
+                <sup>2</sup>
+              ,</span>
+
               <span class="author-block">
-                <!-- <a href="SECOND AUTHOR PERSONAL LINK" target="_blank" -->
-                Wenyi Li<sup>1</sup>,</span><br />
+                <a href="https://yuyangli.com/" target="_blank">Yuyang Li</a>
+                <sup>3</sup>
+              ,</span>
+
               <span class="author-block">
-                <!-- <a href="SECOND AUTHOR PERSONAL LINK" target="_blank" -->
-                Rong Zhi<sup>3</sup>,</span>
+                Zongzheng Zhang
+                <sup>1</sup>
+              ,</span>
+
               <span class="author-block">
-                <a href="https://ha0tang.github.io/" target="_blank">Hao Tang</a><sup>4</sup>,</span>
+                <a href="https://c7w.tech/about/" target="_blank">Huan-ang Gao</a>
+                <sup>1</sup>
+              ,</span>
+
               <span class="author-block">
-                <a href="https://sites.google.com/view/fromandto" target="_blank">Hao Zhao</a><sup>&dagger;1</sup>
+                Siqi Li
+                <sup>1</sup>
+              ,</span>
+
+              <span class="author-block">
+                <a href="https://yzhu.io/" target="_blank">Yixin Zhu</a>
+                <sup>3</sup>
+              ,</span>
+
+              <span class="author-block">
+                Guyue Zhou
+                <sup>1,4</sup>
+              ,</span>
+
+              <span class="author-block">
+                <a href="https://zsdonghao.github.io/" target="_blank">Hao Dong</a>
+                <sup>2</sup>
+              ,</span>
+
+              <span class="author-block">
+                <a href="https://sites.google.com/view/fromandto" target="_blank">Hao Zhao</a>
+                <sup>&dagger;1</sup>
               </span>
             </div>
             <!-- a margin of 0.5em -->
             <div style="margin: 0.5em;"></div>
             <div class="is-size-5 publication-authors">
               <span class="author-block is-size-6">
-                <sup>1</sup> Institute for AI Industry Research (AIR), Tsinghua University &nbsp;&nbsp;&nbsp;
+                <sup>1</sup> Institute for AI Industry Research (AIR), Tsinghua University
                 <br>
-                <sup>2</sup> University of Chinese Academy of Sciences &nbsp;&nbsp;&nbsp;
-                <sup>3</sup> Mercedes-Benz Group China Ltd. &nbsp;&nbsp;&nbsp;
-                <sup>4</sup> Carnegie Mellon University
+                <sup>2</sup> CFCS, School of Computer Science, Peking University &nbsp;&nbsp;&nbsp;
+                <sup>3</sup> Institute for Artificial Intelligence, Peking University  <br/>
+                <sup>4</sup> School of Vehicle and Mobility, Tsinghua University <br/>
                 <!-- <div style="margin: 0.1em;"></div> -->
-                <span class="eql-cntrb"><small><br /><sup>*</sup>Indicates Equal Contribution</small></span>
-                <!-- a span of 5em-->
-                <span style="margin: 1em;"></span>
+                <!-- <span class="eql-cntrb"><small><br /><sup>*</sup>Indicates Equal Contribution</small></span>
+                <!-- a span of 5em -->
+                <!-- <span style="margin: 1em;"></span>  -->
                 <span class="eql-cntrb"><small><sup>&dagger;</sup>Indicates Corresponding Author</small></span>
             </div>
 
@@ -86,7 +121,7 @@
               <div class="publication-links">
                 <!-- Arxiv PDF link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2403.09638.pdf" target="_blank"
+                  <a href="https://arxiv.org/pdf/xxxx.yyyyy.pdf" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -96,7 +131,7 @@
                 </span>
 
                 <!-- Github link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://github.com/AIR-DISCOVER/SCP-Diff-Toolkit" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -104,11 +139,11 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2403.09638" target="_blank"
+                  <a href="https://arxiv.org/abs/xxxx.yyyyy" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -128,24 +163,21 @@
   <section class="hero teaser">
     <div class="container is-max-desktop">
       <div class="hero-body">
-        <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <!-- <source src="static/videos/banner_video.mp4" type="video/mp4" /> -->
-        <!-- </video> -->
+        <source src="static/videos/intro_compressed.mp4" type="video/mp4" />
+        </video>
         <!-- centering the image -->
-        <div class="columns is-centered">
+        <!-- <div class="columns is-centered">
           <!-- <div class="column is-four-fifths"> -->
           <!-- <div class="publication-video"> -->
-          <img src="static/images/Teaser_cs1.jpg" width="100%" />
+          <!-- <img src="static/images/Teaser_cs1.jpg" width="100%" /> -->
           <!-- </div> -->
           <!-- </div> -->
-        </div>
+        <!-- </div> -->
         <!-- <img src="static/images/Teaser_cs1.jpg" width="100%" /> -->
         <h2 class="has-text-centered is-size-6">
-          <b>Left to right: Semantic Label Map, Ground Truth, Ours.</b> The proposed SCP-Diff can generate
-          photo-realistic images from semantic masks. While the state-of-the-art method ECGAN achieves 44.5 FID on
-          Cityscapes, our method achieves 10.5 FID. The quality is credited to the strong spatial and categorical prior
-          of Cityscapes.
+         Demonstration Video of <b>PreAfford</b>.
         </h2>
       </div>
     </div>
@@ -160,7 +192,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Semantic image synthesis (SIS) shows good promises for sensor simulation. However, current best practices in this field, based on GANs, have not yet reached the desired level of quality. As latent diffusion models make significant strides in image generation, we are prompted to evaluate ControlNet, a notable method for its dense control capabilities. Our investigation uncovered two primary issues with its results: the presence of weird sub-structures within large semantic areas and the misalignment of content with the semantic mask. Through empirical study, we pinpointed the cause of these problems as a mismatch between the noised training data distribution and the standard normal prior applied at the inference stage. To address this challenge, we developed specific noise priors for SIS, encompassing spatial, categorical, and a novel spatial-categorical joint prior for inference. This approach, which we have named SCP-Diff, has yielded exceptional results, achieving an FID of 10.53 on Cityscapes and 12.66 on ADE20K.
+Robotic manipulation of ungraspable objects with two-finger grippers presents significant challenges due to the paucity of graspable features, while traditional pre-grasping techniques, which rely on repositioning objects and leveraging external aids like table edges, lack the adaptability across object categories and scenes. Addressing this, we introduce <b>PreAfford</b>, a novel pre-grasping planning framework that utilizes a point-level affordance representation and a relay training approach to enhance adaptability across a broad range of environments and object types, including those previously unseen. Demonstrated on the ShapeNet-v2 dataset, <b>PreAfford</b> significantly improves grasping success rates by 69% and validates its practicality through real-world experiments. This work offers a robust and adaptable solution for manipulating ungraspable objects.
             </p>
           </div>
         </div>
@@ -174,23 +206,19 @@
     <div class="hero-body">
       <div class="container">
         <!-- Paper video. -->
-        <h2 class="title is-3">Method</h2>
+        <h2 class="title is-3">Introduction & Method</h2>
         <div class="columns is-centered">
-          <img src="static/images/main_graph.jpg" width="55%" />
+          <img src="static/images/teaser.jpg" width="55%" />
         </div>
         <h2 class="has-text-centered is-size-6">
-          Overall pipeline for our proposed method.
+          Introduction to <b>PreAfford</b>. Adopting a <b>relay training</b> paradigm, two successive modules collaborate to handle the grasping tasks of ungraspable objects utilizing different environmental features (edge, slope, slot and wall).
         </h2>
-        <br />
+        <br /><br />
         <div class="columns is-centered">
-          <img src="static/images/ade-teaser.jpg" width="55%" />
+          <img src="static/images/framework.jpg" width="55%" />
         </div>
         <h2 class="has-text-centered is-size-6" width="55%">
-          <b>Explanation of the underlying mechanisms of our proposed noise priors using ADE20K.</b> Introducing the
-          spatial prior aligns the image style with the dataset's aesthetic while removing odd substructures in large
-          semantic areas. Incorporating the class prior can enhance alignment with the provided semantic masks. By
-          jointing spatial and class priors, their beneficial features are combined, allowing our joint prior (SCP-Diff)
-          to achieve state-of-the-art results on ADE20K.
+          <b>Framework of PreAfford.</b> Pre-grasping and grasping modules are included, each containing an affordance network, proposal network, and critic network. In the inference phase, the two modules process point clouds to devise strategies for pre-grasping and grasping. Conversely, during training, the grasping module generates rewards to train the pre-grasping module, which we intuitively call <b>relay</b>.
         </h2>
 
       </div>
@@ -204,159 +232,188 @@
       <div class="container">
         <!-- Paper video. -->
         <h2 class="title is-3">Results</h2>
+        
         <div class="columns is-centered has-text-centered"
           style="width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column">
 
           <div style="width: 70%; display: flex; justify-content: center; align-items: stretch; flex-direction: row">
             <div style="width: 100%;">
-              <img src="static/images/web_cs/000067.png_label.jpg" alt="">
-            </div>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <div id="slider2" class="beer-slider" data-beer-label="ControlNet" style="width: 100%;">
-              <img src="static/images/web_cs/000067.png_controlnet.jpg" alt="">
-              <div class="beer-reveal" data-beer-label="Ours">
-                <img src="static/images/web_cs/000067.png_ours.jpg" alt="">
-              </div>
+              <img src="static/images/main.jpg" alt="">
             </div>
           </div>
 
-          <div style="margin: 0.5em;"></div>
+          <div style="width: 70%;"><b>Qualitative results.</b> Both training and testing categories across four distinct scenarios (edge, slot, slope, and wall) are tested. Affordance maps illustrate potential effective interaction areas. It can be observed that <b>PreAfford</b> yields reasonable pre-grasping and grasping strategies across different object categories and scenes on both seen and unseen objects.</div>
 
+          <div style="margin: 1em;"></div>
 
           <div style="width: 70%; display: flex; justify-content: center; align-items: stretch; flex-direction: row">
             <div style="width: 100%;">
-              <img src="static/images/web_cs/000097.png_label.jpg" alt="">
-            </div>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <div id="slider4" class="beer-slider" data-beer-label="ControlNet" style="width: 100%;">
-              <img src="static/images/web_cs/000097.png_controlnet.jpg" alt="">
-              <div class="beer-reveal" data-beer-label="Ours">
-                <img src="static/images/web_cs/000097.png_ours.jpg" alt="">
-              </div>
+              <img src="static/images/multiple.jpg" alt="">
             </div>
           </div>
 
+          <div style="width: 70%;"><b>Multi-feature environment adaptability.</b> (a) Rendered image of the multi-feature environment. (b) Point cloud and affordance hot map, showcasing reasonable pre-grasping policies for objects at different locations.</div>
 
-          <div style="margin: 0.5em;"></div>
+          <div style="margin: 1em;"></div>
 
-          <div style="width: 70%; display: flex; justify-content: center; align-items: stretch; flex-direction: row">
-            <div style="width: 100%;">
-              <img src="static/images/web_cs/000127.png_label.jpg" alt="">
-            </div>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <div id="slider5" class="beer-slider" data-beer-label="ControlNet" style="width: 100%;">
-              <img src="static/images/web_cs/000127.png_controlnet.jpg" alt="">
-              <div class="beer-reveal" data-beer-label="Ours">
-                <img src="static/images/web_cs/000127.png_ours.jpg" alt="">
-              </div>
-            </div>
-          </div>
+          <div style="width: 85%;"><b>Table: Comparison with baselines.</b> Pre-grasping significantly improves grasping success rates by 52.9%. Closed-loop strategy further improves success rates by 16.4% over all categories. A push in a random direction and a push <b>towards</b> the geometric center are also included as baselines.</div>
 
-          <div style="margin: 0.5em;"></div>
+          <!-- Table with training and testing object categories -->
+          <table border="1">
+            <tr>
+              <th rowspan="2"><strong>Setting</strong></th>
+              <th colspan="6"><strong>Train object categories</strong></th>
+              <th colspan="6"><strong>Test object categories</strong></th>
+            </tr>
+            <tr>
+              <td><strong>Edge</strong></td>
+              <td><strong>Wall</strong></td>
+              <td><strong>Slope</strong></td>
+              <td><strong>Slot</strong></td>
+              <td><strong>Multi</strong></td>
+              <td><strong>Avg.</strong></td>
+              <td><strong>Edge</strong></td>
+              <td><strong>Wall</strong></td>
+              <td><strong>Slope</strong></td>
+              <td><strong>Slot</strong></td>
+              <td><strong>Multi</strong></td>
+              <td><strong>Avg.</strong></td>
+            </tr>
+            <tr>
+              <td>W/o pre-grasping</td>
+              <td>2.3</td>
+              <td>3.8</td>
+              <td>4.3</td>
+              <td>3.4</td>
+              <td>4.0</td>
+              <td>3.6</td>
+              <td>6.1</td>
+              <td>2.3</td>
+              <td>2.9</td>
+              <td>5.7</td>
+              <td>6.0</td>
+              <td>4.6</td>
+            </tr>
+            <tr>
+              <td>Random-direction Push</td>
+              <td>21.6</td>
+              <td>10.3</td>
+              <td>6.4</td>
+              <td>16.8</td>
+              <td>18.1</td>
+              <td>14.6</td>
+              <td>24.9</td>
+              <td>17.2</td>
+              <td>12.1</td>
+              <td>18.4</td>
+              <td>23.0</td>
+              <td>19.1</td>
+            </tr>
+            <tr>
+              <td>Center-point Push</td>
+              <td>32.5</td>
+              <td>23.7</td>
+              <td>40.5</td>
+              <td>39.2</td>
+              <td>39.0</td>
+              <td>35.0</td>
+              <td>25.1</td>
+              <td>17.4</td>
+              <td>28.0</td>
+              <td>30.2</td>
+              <td>21.5</td>
+              <td>24.4</td>
+            </tr>
+            <tr>
+              <td>Ours w/o closed-loop</td>
+              <td>67.2</td>
+              <td>41.5</td>
+              <td>58.3</td>
+              <td>76.9</td>
+              <td>63.6</td>
+              <td>61.5</td>
+              <td>56.4</td>
+              <td>37.3</td>
+              <td>62.6</td>
+              <td>75.8</td>
+              <td>55.4</td>
+              <td>57.5</td>
+            </tr>
+            <tr>
+              <td><strong>Ours</strong></td>
+              <td><strong>81.4</strong></td>
+              <td><strong>43.4</strong></td>
+              <td><strong>73.1</strong></td>
+              <td><strong>83.5</strong></td>
+              <td><strong>74.1</strong></td>
+              <td><strong>71.1</strong></td>
+              <td><strong>83.7</strong></td>
+              <td><strong>47.6</strong></td>
+              <td><strong>80.5</strong></td>
+              <td><strong>83.0</strong></td>
+              <td><strong>74.6</strong></td>
+              <td><strong>73.9</strong></td>
+            </tr>
+          </table>
 
-          <div style="width: 55%; display: flex; justify-content: center; align-items: stretch; flex-direction: row">
-            <div style="width: 100%;">
-              <img src="static/images/web_ade20k/001109.png_label.jpg" alt="">
-            </div>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <div id="slider6" class="beer-slider" data-beer-label="ControlNet" style="width: 100%;">
-              <img src="static/images/web_ade20k/001109.png_controlnet.jpg" alt="">
-              <div class="beer-reveal" data-beer-label="Ours">
-                <img src="static/images/web_ade20k/001109.png_ours.jpg" alt="">
-              </div>
-            </div>
-          </div>
+           <div style="margin: 1em;"></div>
+            
+          <div style="width: 85%;"><b>Real-world experiments.</b> Four pre-grasping cases with their affordance map are demonstrated: (a) Move a tablet to table edge, (b) Push a plate towards wall, (c) Push a keyboard up onto a slope and (d) Slide a tablet into a slot.</div>
 
-          <div style="margin: 0.5em;"></div>
-
-          <div style="width: 55%; display: flex; justify-content: center; align-items: stretch; flex-direction: row">
-            <div style="width: 100%;">
-              <img src="static/images/web_ade20k/001569.png_label.jpg" alt="">
-            </div>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <div id="slider8" class="beer-slider" data-beer-label="ControlNet" style="width: 100%;">
-              <img src="static/images/web_ade20k/001569.png_controlnet.jpg" alt="">
-              <div class="beer-reveal" data-beer-label="Ours">
-                <img src="static/images/web_ade20k/001569.png_ours.jpg" alt="">
-              </div>
-            </div>
-          </div>
-
-
-          <div style="margin: 0.5em;"></div>
-
-          <div style="width: 55%; display: flex; justify-content: center; align-items: stretch; flex-direction: row">
-            <div style="width: 100%;">
-              <img src="static/images/web_ade20k/001915.png_label.jpg" alt="">
-            </div>
-            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <div id="slider10" class="beer-slider" data-beer-label="ControlNet" style="width: 100%;">
-              <img src="static/images/web_ade20k/001915.png_controlnet.jpg" alt="">
-              <div class="beer-reveal" data-beer-label="Ours">
-                <img src="static/images/web_ade20k/001915.png_ours.jpg" alt="">
-              </div>
-            </div>
-          </div>
+            <!-- Table with seen and unseen categories -->
+            <table border="1">
+              <tr>
+                <th rowspan="2"><strong>Setting</strong></th>
+                <th colspan="6"><strong>Seen categories</strong></th>
+                <th colspan="6"><strong>Unseen categories</strong></th>
+              </tr>
+              <tr>
+                <td><strong>Edge</strong></td>
+                <td><strong>Wall</strong></td>
+                <td><strong>Slope</strong></td>
+                <td><strong>Slot</strong></td>
+                <td><strong>Multi</strong></td>
+                <td><strong>Avg.</strong></td>
+                <td><strong>Edge</strong></td>
+                <td><strong>Wall</strong></td>
+                <td><strong>Slope</strong></td>
+                <td><strong>Slot</strong></td>
+                <td><strong>Multi</strong></td>
+                <td><strong>Avg.</strong></td>
+              </tr>
+              <tr>
+                <td>W/o pre-grasping</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>10</td>
+                <td>0</td>
+                <td>5</td>
+                <td>0</td>
+                <td>0</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>With pre-grasping</td>
+                <td>70</td>
+                <td>45</td>
+                <td>80</td>
+                <td>90</td>
+                <td>85</td>
+                <td>74</td>
+                <td>80</td>
+                <td>30</td>
+                <td>75</td>
+                <td>90</td>
+                <td>85</td>
+                <td>72</td>
+              </tr>
+            </table>
 
         </div>
-        <br />
-
-        <!-- quantitative results start here -->
-        <table>
-
-          <tr>
-            <th rowspan="2">Method</th>
-            <th colspan="3">Cityscapes</th>
-            <th colspan="3">ADE20K</th>
-          </tr>
-          <tr>
-            <!-- Empty cell for the corner -->
-            <td>mIoU ↑</td>
-            <td>Acc ↑</td>
-            <td>FID ↓</td>
-            <td>mIoU ↑</td>
-            <td>Acc ↑</td>
-            <td>FID ↓</td>
-          </tr>
-          <tr>
-            <td>Normal Prior</td>
-            <td>65.14 (+0.00)</td>
-            <td>94.14 (+0.00)</td>
-            <td>23.35 (+0.00)</td>
-            <td>20.73 (+0.00)</td>
-            <td>61.14 (+0.00)</td>
-            <td>20.58 (+0.00)</td>
-          </tr>
-          <tr>
-            <td>Spatial Prior</td>
-            <td>66.77 (+1.63)</td>
-            <td>94.29 (+0.15)</td>
-            <td>12.83 (-10.52)</td>
-            <td>20.86 (+0.13)</td>
-            <td>64.46 (+3.32)</td>
-            <td>16.03 (-4.55)</td>
-          </tr>
-          <tr>
-            <td>Categorical Prior</td>
-            <td>66.86 (+1.72)</td>
-            <td>94.54 (+0.40)</td>
-            <td>11.63 (-11.72)</td>
-            <td>21.86 (+1.13)</td>
-            <td>66.63 (+5.49)</td>
-            <td>16.56 (-4.02)</td>
-          </tr>
-          <tr>
-            <td>Joint Prior</td>
-            <td><strong>67.92 (+2.78)</strong></td>
-            <td><strong>94.65 (+0.51)</strong></td>
-            <td><strong>10.53 (-12.82)</strong></td>
-            <td><strong>25.61 (+4.88)</strong></td>
-            <td><strong>71.79 (+10.65)</strong></td>
-            <td><strong>12.66 (-7.92)</strong></td>
-          </tr>
-          <caption>Quantitative Comparison of Different Noise Priors</caption>
-        </table>
-
       </div>
     </div>
   </section>
@@ -368,12 +425,7 @@
       <h2 class="title">BibTeX</h2>
       If you find our work useful in your research, please consider citing:
       <div style="margin: 0.5em;"></div>
-      <pre><code>@article{gao2024scp,
-  title={SCP-Diff: Photo-Realistic Semantic Image Synthesis with Spatial-Categorical Joint Prior},
-  author={Gao, Huan-ang and Gao, Mingju and Li, Jiaju and Li, Wenyi and Zhi, Rong and Tang, Hao and Zhao, Hao},
-  journal={arXiv preprint arXiv:2403.09638},
-  year={2024}
-}</code></pre>
+      <pre><code>todo</code></pre>
     </div>
   </section>
   <!--End BibTex citation -->
