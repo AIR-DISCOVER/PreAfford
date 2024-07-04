@@ -6,8 +6,7 @@
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description"
-    content="PreAfford: Universal Affordance-Based Pre-Grasping for Diverse Objects and Environments. Robotic manipulation of ungraspable objects with two-finger grippers presents significant challenges due to the paucity of graspable features, while traditional pre-grasping techniques, which rely on repositioning objects and leveraging external aids like table edges, lack the adaptability across object categories and scenes. Addressing this, we introduce PreAfford, a novel pre-grasping planning framework that utilizes a point-level affordance representation and a relay training approach to enhance adaptability across a broad range of environments and object types, including those previously unseen. Demonstrated on the ShapeNet-v2 dataset, PreAfford significantly improves grasping success rates by 69% and validates its practicality through real-world experiments. This work offers a robust and adaptable solution for manipulating ungraspable objects." />
-
+    content="PreAfford: Universal Affordance-Based Pre-Grasping for Diverse Objects and Environments. Robotic manipulation with two-finger grippers is challenged by objects lacking distinct graspable features. Traditional pre-grasping methods, which typically involve repositioning objects or utilizing external aids like table edges, are limited in their adaptability across different object categories and environments. To overcome these limitations, we introduce PreAfford, a novel pre-grasping planning framework that incorporates a point-level affordance representation and a relay training approach. Our method significantly improves adaptability, allowing effective manipulation across a wide range of environments and object types. When evaluated on the ShapeNet-v2 dataset, PreAfford not only enhances grasping success rates by 69\% but also demonstrates its practicality through successful real-world experiments. These improvements highlight PreAfford's potential to redefine standards for robotic handling of complex manipulation tasks in diverse settings.
   <meta name="keywords"
     content="PreAfford: Universal Affordance-Based Pre-Grasping for Diverse Objects and Environments" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -165,7 +164,7 @@
       <div class="hero-body">
         <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/intro_website_ffmpeg.mp4" type="video/mp4" />
+        <source src="static/video/output.mp4" type="video/mp4" />
         </video>
         <!-- centering the image -->
         <!-- <div class="columns is-centered">
@@ -192,7 +191,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-Robotic manipulation of ungraspable objects with two-finger grippers presents significant challenges due to the paucity of graspable features, while traditional pre-grasping techniques, which rely on repositioning objects and leveraging external aids like table edges, lack the adaptability across object categories and scenes. Addressing this, we introduce <b>PreAfford</b>, a novel pre-grasping planning framework that utilizes a point-level affordance representation and a relay training approach to enhance adaptability across a broad range of environments and object types, including those previously unseen. Demonstrated on the ShapeNet-v2 dataset, <b>PreAfford</b> significantly improves grasping success rates by 69% and validates its practicality through real-world experiments. This work offers a robust and adaptable solution for manipulating ungraspable objects.
+              Robotic manipulation with two-finger grippers is challenged by objects lacking distinct graspable features. Traditional pre-grasping methods, which typically involve repositioning objects or utilizing external aids like table edges, are limited in their adaptability across different object categories and environments. To overcome these limitations, we introduce PreAfford, a novel pre-grasping planning framework that incorporates a point-level affordance representation and a relay training approach. Our method significantly improves adaptability, allowing effective manipulation across a wide range of environments and object types. When evaluated on the ShapeNet-v2 dataset, PreAfford not only enhances grasping success rates by 69\% but also demonstrates its practicality through successful real-world experiments. These improvements highlight PreAfford's potential to redefine standards for robotic handling of complex manipulation tasks in diverse settings.
             </p>
           </div>
         </div>
@@ -216,7 +215,7 @@ Robotic manipulation of ungraspable objects with two-finger grippers presents si
             </div>
           </div>
           <div style="width: 70%;">
-            Introduction to <b>PreAfford</b>. Adopting a <b>relay training</b> paradigm, two successive modules collaborate to handle the grasping tasks of ungraspable objects utilizing different environmental features (edge, slope, slot and wall).
+            <b>Illustration of <i>PreAfford</i>, demonstrating the application of a <i>relay training</i> paradigm where two synergistic modules cooperate to facilitate the manipulation of objects typically considered ungraspable.</b> The <i>pre-grasping</i> module assesses environmental features such as edges, slopes, slots, and walls to propose strategic pre-grasping actions that enhance the likelihood of a successful grasp. Simultaneously, the <i>grasping</i> module evaluates these actions and provides feedback in the form of rewards, which are used to refine and optimize the pre-grasping strategies. Two color bars represent the pre-grasping and grasping phases, respectively, with the color intensity reflecting the calculated affordance values; higher values denote more optimal interaction conditions.
           </div>
         </div>
         <br /><br />
@@ -229,7 +228,7 @@ Robotic manipulation of ungraspable objects with two-finger grippers presents si
             </div>
           </div>
           <div style="width: 70%;">
-            <b>Framework of PreAfford.</b> Pre-grasping and grasping modules are included, each containing an affordance network, proposal network, and critic network. In the inference phase, the two modules process point clouds to devise strategies for pre-grasping and grasping. Conversely, during training, the grasping module generates rewards to train the pre-grasping module, which we intuitively call <b>relay</b>.
+            <b>The framework of PreAfford.</b> The framework consists of two main modules, each incorporating three networks: an affordance network, a proposal network, and a critic network. These networks respectively handle tasks of choosing the contact point, generating a proposal, and evaluating the proposal. PointNet++ (PN++) and MLP are employed to process point clouds and facilitate decision-making. During the inference phase, both modules collaborate to develop strategies for pre-grasping and grasping. In contrast, during the training phase, the grasping module generates rewards that are used to train the pre-grasping module, a process we refer to as <i>relay</i>.
           </div>
         </div>
 
@@ -254,7 +253,9 @@ Robotic manipulation of ungraspable objects with two-finger grippers presents si
             </div>
           </div>
 
-          <div style="width: 70%;"><b>Qualitative results.</b> Both training and testing categories across four distinct scenarios (edge, slot, slope, and wall) are tested. Affordance maps illustrate potential effective interaction areas. It can be observed that <b>PreAfford</b> yields reasonable pre-grasping and grasping strategies across different object categories and scenes on both seen and unseen objects.</div>
+          <div style="width: 70%;">
+            <b>Qualitative Results.</b> Here we demonstrate pre-grasping manipulation on training and testing categories in four scenarios—edge, slot, slope, and wall. Affordance maps highlight effective interaction areas, showing \method’s capability to devise suitable pre-grasping and grasping strategies for various object categories and scenes, including both seen and unseen objects.
+          </div>
 
           <div style="margin: 1em;"></div>
 
@@ -264,11 +265,15 @@ Robotic manipulation of ungraspable objects with two-finger grippers presents si
             </div>
           </div>
 
-          <div style="width: 70%;"><b>Multi-feature environment adaptability.</b> (a) Rendered image of the multi-feature environment. (b) Point cloud and affordance hot map, showcasing reasonable pre-grasping policies for objects at different locations.</div>
+          <div style="width: 70%;">
+            <b>Multi-feature scenario:</b>} PreAfford effectively addresses scenarios where multiple environmental features are present simultaneously. (a) A complex environment, (b) Affordance heatmap.
+          </div>
 
           <div style="margin: 1em;"></div>
 
-          <div style="width: 85%;"><b>Table: Comparison with baselines.</b> Pre-grasping significantly improves grasping success rates by 52.9%. Closed-loop strategy further improves success rates by 16.4% over all categories. A push in a random direction and a push <b>towards</b> the geometric center are also included as baselines.</div>
+          <div style="width: 85%;">
+            <b>Comparison with baselines.</b> Pre-grasping increases grasping success rates by 52.9%. A closed-loop strategy further enhances this improvement by 16.4% across all categories.
+          </div>
 
           <!-- Table with training and testing object categories -->
           <table border="1">
@@ -376,11 +381,15 @@ Robotic manipulation of ungraspable objects with two-finger grippers presents si
             </div>
           </div>
             
-          <div style="width: 70%;"><b>Real-world experiment figures.</b> Four pre-grasping cases with their affordance map are demonstrated: (a) Move a tablet to table edge, (b) Push a plate towards wall, (c) Push a keyboard up onto a slope and (d) Slide a tablet into a slot.</div>
+          <div style="width: 70%;">
+            <b>Real world pre-grasping manipulations with affordance maps.</b> Red areas in the maps indicate optimal pushing locations. Point clouds are captured by Femto Bolt. (a) move a tablet to table edge, (b) push a plate towards a wall, (c) push a keyboard up a slope, and (d) slide a tablet into a slot.
+          </div>
 
           <div style="margin: 1em;"></div>
           
-          <div style="width: 85%;"><b>Table: Real-world experiment results.</b> For both direct grasping (without pre-grasping) and grasping after pre-grasping cases, we perform two experiments on each object in each experimental scene, success rates are shown below as percentages.</div>
+          <div style="width: 85%;">
+            <b>Real-world experiment results.</b> Experiments were conducted twice for each object in every scene, comparing direct grasping (without pre-grasping) to grasping after pre-grasping. Success rates are presented as percentages.
+          </div>
           
             <!-- Table with seen and unseen categories -->
             <table border="1">
